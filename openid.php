@@ -4,7 +4,7 @@ class OpenID
 {
     public $key;
 
-    public $cipher;
+    private $cipher;
 
     private $ivlen;
 
