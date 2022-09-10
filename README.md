@@ -5,22 +5,11 @@ Simple encrypt decrypt ID powered by openssl
 ### Simple using
 ```
 $openid = new OpenID();
-$openid->id = 1;
-echo $openid->encrypt();
+echo $openid->encrypt(1);
 ```
 ### Custom your own key
 ```
 $openid = new OpenID();
-$openid->id = 1;
 $openid->key = 'my_secret_key';
-echo $openid->encrypt();
+echo $openid->encrypt(1);
 ```
-### Custom key & cipher method
-```
-$openid = new OpenID();
-$openid->id = 1;
-$openid->key = 'my_secret_key';
-$openid->cipher = 'aes-128-cbc';
-echo $openid->encrypt();
-```
-You can find out [openssl_get_cipher_methods](https://www.php.net/manual/en/function.openssl-get-cipher-methods.php)
