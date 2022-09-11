@@ -14,8 +14,8 @@ class OpenID
     
     public function __construct($cipher_method = 'bf-cbc')
     {
-        $this->secret_key = 'd3f4ult_s3c2Et_k3y';
-        $this->salt_key = base64_encode(openssl_random_pseudo_bytes(32));
+        $this->secret_key = 'd3f4Ult_s3c2Et_k3y';
+        $this->salt_key = 'd3f4Ult_s4Lt_k3y';
         $this->cipher = $cipher_method;
         $this->ivlen = openssl_cipher_iv_length($this->cipher);
         $this->iv = openssl_random_pseudo_bytes($this->ivlen);
